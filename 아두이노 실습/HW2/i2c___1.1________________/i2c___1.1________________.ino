@@ -1,0 +1,15 @@
+#include <Wire.h>
+#define sv 8
+byte data = 0;
+void setup() {
+ Wire.begin(sv);
+ Wire.onRequest(requestEvent);
+}
+void loop() {
+ data = (byte)random(0, 100);
+ 
+ delay(100);
+}
+void requestEvent() {
+ Wire.write(data);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
